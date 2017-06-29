@@ -54,7 +54,7 @@ def _load_data():
     return X, y, Xt, yt
     
     
-def load_cifar10(normalize = True):
+def load_cifar10(norm = True):
     
     print "download..."
     url = URL_CIFAR_10
@@ -76,7 +76,7 @@ def load_cifar10(normalize = True):
     y = np.eye(np.max(y) + 1)[y]
     yt = np.eye(np.max(yt) + 1)[yt]
     
-    if normalize:
+    if norm:
         X = X / 255.
         Xt = Xt / 255.
     

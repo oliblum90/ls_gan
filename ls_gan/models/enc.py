@@ -9,7 +9,7 @@ import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 
 
-def vgg(weights_fname=None, include_pred_layer=True):
+def enc(weights_fname=None, include_pred_layer=True):
     
     m = Sequential()
     
