@@ -1,0 +1,9 @@
+vgg16/vgg16_weights_tf_dim_ordering_tf_kernels.h5
+projects/
+data_raw/
+
+notebooks/
+
+*.pyc
+
+x*
