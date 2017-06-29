@@ -50,15 +50,14 @@ class Trainer:
     def fit_occ(self, X, y, Xt, yt):
         
         # occlussion
-        data_train = ImageDataGenerator(rescale=1. / 255,
-                                        shear_range=0.2,
+        data_train = ImageDataGenerator(shear_range=0.2,
                                         zoom_range=0.2,
                                         horizontal_flip=True)
 
         data_train.fit(X)
         data_train = data_train.flow(X, y, batch_size=self.bs)
 
-        data_test = ImageDataGenerator(rescale=1. / 255)
+        data_test = ImageDataGenerator()
         data_test = data_test.flow(Xt, yt, batch_size=self.bs)
 
         train_steps = len(y) / self.bs
